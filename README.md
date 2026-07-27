@@ -2,8 +2,6 @@
 
 > **Harmonics** is a Fabric mod for Minecraft that introduces a complete system of **Tiered Musical Instruments** and **Resonant Combat Weapons**, featuring a unique item-fusion mechanic.
 
-![Harmonics Mod]
-
 ---
 
 ## Core Features
