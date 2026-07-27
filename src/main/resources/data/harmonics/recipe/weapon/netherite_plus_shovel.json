@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " X ",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "X": "minecraft:netherite_ingot",
+    "S": "minecraft:stick"
+  },
+  "result": {
+    "id": "harmonics:netherite_plus_shovel",
+    "count": 1
+  }
+}

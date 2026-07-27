@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "harmonics:bone"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "harmonics:bone"
+      }
+    ]
+  }
+}

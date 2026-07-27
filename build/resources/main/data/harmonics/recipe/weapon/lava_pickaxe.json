@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "X": "minecraft:lava_bucket",
+    "S": "minecraft:stick"
+  },
+  "result": {
+    "id": "harmonics:lava_pickaxe",
+    "count": 1
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "harmonics",
+  "version": "${version}",
+  "name": "Harmonics (Unified)",
+  "description": "Harmonics enriches your Minecraft experience with a massive collection of music, combat, and defense options! Explore over 89 unique items, including 16 tiered weapons, 45 playable instruments, and 28 complete armor sets crafted from various vanilla and custom materials.",
+  "authors": [
+    "Antonius"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/harmonics/icon.png",
+  "environment": "*", "entrypoints": {
+    "main": [
+      "com.antonius.harmonics.Harmonics"
+    ],
+    "client": [
+      "com.antonius.harmonics.HarmonicsClient"
+    ]
+  },
+  "mixins": [],
+  "depends": {
+    "fabricloader": ">=0.19.3",
+    "minecraft": "26.2",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}

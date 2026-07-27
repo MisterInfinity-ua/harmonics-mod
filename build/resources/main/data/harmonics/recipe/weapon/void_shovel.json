@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " X ",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "X": "minecraft:end_crystal",
+    "S": "minecraft:stick"
+  },
+  "result": {
+    "id": "harmonics:void_shovel",
+    "count": 1
+  }
+}

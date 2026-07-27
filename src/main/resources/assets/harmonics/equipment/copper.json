@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "harmonics:copper"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "harmonics:copper"
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+[21:01:10 2026-07-25] FETCHING Version 2.44.0
+[21:01:10 2026-07-25] DOWNLOADING https://github.com/spicetify/cli/releases/download/v2.44.0/spicetify-2.44.0-darwin-arm64.tar.gz
+[21:01:11 2026-07-25] EXTRACTING /Users/MolerBoom/.spicetify/spicetify.tar.gz
+[21:01:11 2026-07-25] SETTING EXECUTABLE PERMISSIONS TO /Users/MolerBoom/.spicetify/spicetify
+[21:01:11 2026-07-25] REMOVING /Users/MolerBoom/.spicetify/spicetify.tar.gz
+[21:01:11 2026-07-25] spicetify path already set in /Users/MolerBoom/.zshrc, continuing...
+[21:01:11 2026-07-25] spicetify v2.44.0 was installed successfully to /Users/MolerBoom/.spicetify
+[21:01:11 2026-07-25] Run 'spicetify --help' to get started
