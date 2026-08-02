@@ -21,7 +21,7 @@ import java.util.Map;
 
 /**
  * Registration class for all armor items in the unified Harmonics mod.
- * 28 armor items: 7 materials x 4 pieces each.
+ * 24 armor items: 6 materials x 4 pieces each.
  */
 public class ModArmorItems {
 
@@ -39,9 +39,6 @@ public class ModArmorItems {
     );
     public static final ArmorMaterial BONE_ARMOR_MATERIAL = createArmorMaterial(
         "bone", 20, ArmorMaterials.makeDefense(2, 4, 4, 2, 4), 15, 0.0f, 0.0f, ItemTags.PLANKS
-    );
-    public static final ArmorMaterial COPPER_ARMOR_MATERIAL = createArmorMaterial(
-        "copper", 24, ArmorMaterials.makeDefense(2, 6, 5, 2, 6), 12, 0.0f, 0.0f, ItemTags.PLANKS
     );
     public static final ArmorMaterial AMETHYST_ARMOR_MATERIAL = createArmorMaterial(
         "amethyst", 30, ArmorMaterials.makeDefense(3, 6, 5, 3, 6), 10, 1.0f, 0.0f, ItemTags.PLANKS
@@ -74,12 +71,6 @@ public class ModArmorItems {
     public static final Item BONE_LEGGINGS = createArmorItem("bone_leggings", BONE_ARMOR_MATERIAL, ArmorType.LEGGINGS, false);
     public static final Item BONE_BOOTS = createArmorItem("bone_boots", BONE_ARMOR_MATERIAL, ArmorType.BOOTS, false);
 
-    // === COPPER ARMOR SET ===
-    public static final Item COPPER_HELMET = createArmorItem("copper_helmet", COPPER_ARMOR_MATERIAL, ArmorType.HELMET, false);
-    public static final Item COPPER_CHESTPLATE = createArmorItem("copper_chestplate", COPPER_ARMOR_MATERIAL, ArmorType.CHESTPLATE, false);
-    public static final Item COPPER_LEGGINGS = createArmorItem("copper_leggings", COPPER_ARMOR_MATERIAL, ArmorType.LEGGINGS, false);
-    public static final Item COPPER_BOOTS = createArmorItem("copper_boots", COPPER_ARMOR_MATERIAL, ArmorType.BOOTS, false);
-
     // === AMETHYST ARMOR SET ===
     public static final Item AMETHYST_HELMET = createArmorItem("amethyst_helmet", AMETHYST_ARMOR_MATERIAL, ArmorType.HELMET, false);
     public static final Item AMETHYST_CHESTPLATE = createArmorItem("amethyst_chestplate", AMETHYST_ARMOR_MATERIAL, ArmorType.CHESTPLATE, false);
@@ -94,7 +85,13 @@ public class ModArmorItems {
 
     private static ArmorMaterial createArmorMaterial(String name, int durability, Map<ArmorType, Integer> defense,
             int enchantmentValue, float toughness, float knockbackResistance, net.minecraft.tags.TagKey<Item> repairIngredient) {
-        ResourceKey<EquipmentAsset> assetId = EquipmentAssets.createId(name);
+        
+        // Correctly creates the equipment asset key under "harmonics:<name>"
+        ResourceKey<EquipmentAsset> assetId = ResourceKey.create(
+            EquipmentAssets.ROOT_ID, 
+            Identifier.fromNamespaceAndPath(MOD_ID, name)
+        );
+
         return new ArmorMaterial(
             durability,
             defense,
@@ -110,9 +107,9 @@ public class ModArmorItems {
     private static Item createArmorItem(String name, ArmorMaterial material, ArmorType type, boolean fireResistant) {
         ResourceKey<Item> key = ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MOD_ID, name));
 
-        // Reverted: .setAsset() omitted so no 3D skin layer renders on player model
         Equippable equippable = Equippable.builder(type.getSlot())
                 .setEquipSound(material.equipSound())
+                .setAsset(material.assetId())
                 .setDamageOnHurt(true)
                 .setSwappable(true)
                 .build();
@@ -152,11 +149,6 @@ public class ModArmorItems {
         registerItem("bone_chestplate", BONE_CHESTPLATE);
         registerItem("bone_leggings", BONE_LEGGINGS);
         registerItem("bone_boots", BONE_BOOTS);
-
-        registerItem("copper_helmet", COPPER_HELMET);
-        registerItem("copper_chestplate", COPPER_CHESTPLATE);
-        registerItem("copper_leggings", COPPER_LEGGINGS);
-        registerItem("copper_boots", COPPER_BOOTS);
 
         registerItem("amethyst_helmet", AMETHYST_HELMET);
         registerItem("amethyst_chestplate", AMETHYST_CHESTPLATE);

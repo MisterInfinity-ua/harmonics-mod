@@ -123,12 +123,15 @@ print(f"Generated {len(MATERIALS) * len(TYPES)} instruments "
       f"({len(MATERIALS)} materials x {len(TYPES)} types).")
 
 # --- Weapons (WeaponMaterial x WeaponType) ---------------------------------
+# NOTE ON TEXTURES: real pixel-art tool silhouettes (blade/head + guard + handle),
+# not flat squares -- see weapon_texgen.py for the drawing code.
 WEAPON_MATERIALS = {
-    # id: (display_name, color)
-    "obsidian":       ("Obsidian", (35, 20, 55)),
-    "lava":           ("Lava", (230, 100, 20)),
-    "netherite_plus": ("Netherite+", (90, 70, 70)),
-    "void":           ("Void", (25, 10, 40)),
+    # id: (display_name, blade, edge, guard, glow)
+    "obsidian":       ("Obsidian",   (35,20,55),  (150,70,210), (60,60,68),   (200,140,255)),
+    "lava":           ("Lava",       (200,80,15), (255,200,60), (60,60,68),   (255,230,140)),
+    "netherite_plus": ("Netherite+", (60,52,52),  (200,90,60),  (150,120,60), (255,150,120)),
+    "void":           ("Void",       (22,10,35),  (170,70,255), (50,40,70),   (210,160,255)),
+    "wither":         ("Wither",     (32,32,34),  (150,190,90), (210,205,190),(190,230,140)),
 }
 WEAPON_TYPES = {
     "sword": "Sword",
@@ -137,8 +140,10 @@ WEAPON_TYPES = {
     "pickaxe": "Pickaxe",
 }
 
+from weapon_texgen import make_weapon_texture
+
 weapon_lang = {}
-for mat_id, (mat_name, color) in WEAPON_MATERIALS.items():
+for mat_id, (mat_name, blade, edge, guard, glow) in WEAPON_MATERIALS.items():
     for type_id, type_name in WEAPON_TYPES.items():
         item_id = f"{mat_id}_{type_id}"
 
@@ -163,9 +168,11 @@ for mat_id, (mat_name, color) in WEAPON_MATERIALS.items():
             {"parent": "minecraft:item/handheld", "textures": {"layer0": f"harmonics:item/{item_id}_masterwork"}},
         )
 
-        make_texture(os.path.join(RES, "assets", "harmonics", "textures", "item", f"{item_id}.png"), color)
-        make_texture(os.path.join(RES, "assets", "harmonics", "textures", "item", f"{item_id}_masterwork.png"),
-                     tuple(min(255, c + 80) for c in color), glow=True)
+        base_path = os.path.join(RES, "assets", "harmonics", "textures", "item", f"{item_id}.png")
+        mw_path = os.path.join(RES, "assets", "harmonics", "textures", "item", f"{item_id}_masterwork.png")
+        ensure_dir(base_path)
+        make_weapon_texture(type_id, blade, edge, guard).save(base_path)
+        make_weapon_texture(type_id, blade, edge, guard, masterwork=True, glow=glow).save(mw_path)
 
         weapon_lang[f"item.harmonics.{item_id}"] = f"{mat_name} {type_name}"
 

@@ -22,7 +22,7 @@ import org.slf4j.LoggerFactory;
 /**
  * Harmonics - Unified Mod (Weapons + Instruments + Armor)
  * 
- * Total: 85 items (16 weapons + 45 instruments + 24 armor)
+ * Total: 89 items (20 weapons + 45 instruments + 24 armor)
  */
 public class Harmonics implements ModInitializer {
     public static final String MOD_ID = "harmonics";
@@ -53,7 +53,7 @@ public class Harmonics implements ModInitializer {
         
         LOGGER.info("====================================");
         LOGGER.info("[Harmonics] Unified mod loaded successfully!");
-        LOGGER.info("Total items: 85 (16 weapons + 45 instruments + 24 armor)");
+        LOGGER.info("Total items: 89 (20 weapons + 45 instruments + 24 armor)");
         LOGGER.info("====================================");
     }
 

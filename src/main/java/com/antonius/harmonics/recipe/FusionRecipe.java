@@ -2,6 +2,7 @@ package com.antonius.harmonics.recipe;
 
 import com.antonius.harmonics.HarmonicsComponents;
 import com.antonius.harmonics.item.InstrumentItem;
+import com.antonius.harmonics.item.ModWeaponItem;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
@@ -14,9 +15,9 @@ import net.minecraft.world.level.Level;
 
 /**
  * Special (code-driven, not JSON-ingredient-driven) recipe: put exactly two of the
- * SAME base-tier instrument anywhere in the crafting grid -> get one masterwork
- * (fused) instrument back. Works for every material/type combo without needing
- * 45 separate JSON recipes.
+ * SAME base-tier instrument OR weapon anywhere in the crafting grid -> get one
+ * masterwork (fused) item back. Works for every material/type combo without needing
+ * dozens of separate JSON recipes.
  *
  * As of 26.x, CustomRecipe takes no constructor arguments (the old
  * CraftingBookCategory param and the CustomRecipe.Serializer inner class are both
@@ -26,7 +27,8 @@ import net.minecraft.world.level.Level;
  *
  * Rules:
  *  - Exactly 2 items in the grid, all other slots empty.
- *  - Both stacks must be the same InstrumentItem.
+ *  - Both stacks must be the same item, and either both InstrumentItems or both
+ *    ModWeaponItems (never a mix).
  *  - Neither input may already be masterwork (no double-fusing in one craft).
  */
 public class FusionRecipe extends CustomRecipe {
@@ -39,6 +41,10 @@ public class FusionRecipe extends CustomRecipe {
         super();
     }
 
+    private static boolean isFusable(ItemStack stack) {
+        return stack.getItem() instanceof InstrumentItem || stack.getItem() instanceof ModWeaponItem;
+    }
+
     @Override
     public boolean matches(CraftingInput input, Level level) {
         ItemStack first = ItemStack.EMPTY;
@@ -48,7 +54,7 @@ public class FusionRecipe extends CustomRecipe {
             ItemStack stack = input.getItem(i);
             if (stack.isEmpty()) continue;
 
-            if (!(stack.getItem() instanceof InstrumentItem)) return false;
+            if (!isFusable(stack)) return false;
             if (stack.has(HarmonicsComponents.MASTERWORK)) return false;
 
             if (first.isEmpty()) {

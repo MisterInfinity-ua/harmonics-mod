@@ -171,7 +171,10 @@ public class ModWeaponItem extends Item {
         if (isMasterwork(stack)) {
             damage *= 1.5f;
         }
-        target.hurt(attacker.level().damageSources().playerAttack((Player) attacker), damage);
+        var damageSource = attacker instanceof Player player
+                ? attacker.level().damageSources().playerAttack(player)
+                : attacker.level().damageSources().mobAttack(attacker);
+        target.hurt(damageSource, damage);
 
         if (!attacker.level().isClientSide()) {
             applySpecialEffect(stack, target, attacker);
@@ -224,6 +227,14 @@ public class ModWeaponItem extends Item {
                 target.addEffect(new MobEffectInstance(MobEffects.DARKNESS,
                         (int) (30.0f * multiplier), 0, false, true));
             }
+            case WITHER_TOUCH -> {
+                target.addEffect(new MobEffectInstance(MobEffects.WITHER,
+                        (int) (60.0f * multiplier), masterwork ? 1 : 0, false, true));
+                if (masterwork && attacker instanceof Player player) {
+                    player.addEffect(new MobEffectInstance(MobEffects.STRENGTH,
+                            (int) (100.0f * multiplier), 0, false, true));
+                }
+            }
             case NONE -> { /* no-op */ }
         }
     }
@@ -263,6 +274,7 @@ public class ModWeaponItem extends Item {
     }
 
     public boolean isFireResistant() {
-        return material == WeaponMaterial.LAVA || material == WeaponMaterial.NETHERITE_PLUS;
+        return material == WeaponMaterial.LAVA || material == WeaponMaterial.NETHERITE_PLUS
+                || material == WeaponMaterial.WITHER;
     }
 }

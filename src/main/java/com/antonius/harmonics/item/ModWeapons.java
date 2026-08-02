@@ -47,7 +47,8 @@ public final class ModWeapons {
                 .enchantable(material.getEnchantability())
                 .setId(key);
 
-        if (material == WeaponMaterial.LAVA || material == WeaponMaterial.NETHERITE_PLUS) {
+        if (material == WeaponMaterial.LAVA || material == WeaponMaterial.NETHERITE_PLUS
+                || material == WeaponMaterial.WITHER) {
             props.fireResistant();
         }
 
