@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "MMM",
+    "M M"
+  ],
+  "key": {
+    "M": "minecraft:nether_star"
+  },
+  "result": {
+    "id": "harmonics:astral_helmet",
+    "count": 1
+  },
+  "show_notification": true
+}

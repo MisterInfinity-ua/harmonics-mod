@@ -21,7 +21,7 @@ import java.util.Map;
 
 /**
  * Registration class for all armor items in the unified Harmonics mod.
- * 24 armor items: 6 materials x 4 pieces each.
+ * 44 armor items: 11 materials x 4 pieces each.
  */
 public class ModArmorItems {
 
@@ -45,6 +45,23 @@ public class ModArmorItems {
     );
     public static final ArmorMaterial EMERALD_ARMOR_MATERIAL = createArmorMaterial(
         "emerald", 45, ArmorMaterials.makeDefense(4, 8, 7, 4, 8), 8, 2.0f, 0.0f, ItemTags.PLANKS
+    );
+    // === NEW ARMOR SETS v1.5 ===
+    public static final ArmorMaterial CRYSTAL_ARMOR_MATERIAL = createArmorMaterial(
+        "crystal", 50, ArmorMaterials.makeDefense(3, 8, 7, 3, 8), 12, 2.0f, 0.1f, ItemTags.PLANKS
+    );
+    public static final ArmorMaterial SHADOW_ARMOR_MATERIAL = createArmorMaterial(
+        "shadow", 55, ArmorMaterials.makeDefense(4, 9, 8, 4, 9), 10, 2.5f, 0.15f, ItemTags.PLANKS
+    );
+    public static final ArmorMaterial ASTRAL_ARMOR_MATERIAL = createArmorMaterial(
+        "astral", 45, ArmorMaterials.makeDefense(3, 7, 6, 3, 7), 14, 1.5f, 0.0f, ItemTags.PLANKS
+    );
+    // === NEW ARMOR SETS v1.6 ===
+    public static final ArmorMaterial ENDER_ARMOR_MATERIAL = createArmorMaterial(
+        "ender", 50, ArmorMaterials.makeDefense(4, 9, 7, 4, 9), 18, 2.0f, 0.1f, ItemTags.PLANKS
+    );
+    public static final ArmorMaterial FROST_ARMOR_MATERIAL = createArmorMaterial(
+        "frost", 35, ArmorMaterials.makeDefense(3, 7, 6, 3, 7), 12, 1.5f, 0.0f, ItemTags.PLANKS
     );
 
     // === WOODEN ARMOR SET ===
@@ -82,6 +99,36 @@ public class ModArmorItems {
     public static final Item EMERALD_CHESTPLATE = createArmorItem("emerald_chestplate", EMERALD_ARMOR_MATERIAL, ArmorType.CHESTPLATE, true);
     public static final Item EMERALD_LEGGINGS = createArmorItem("emerald_leggings", EMERALD_ARMOR_MATERIAL, ArmorType.LEGGINGS, true);
     public static final Item EMERALD_BOOTS = createArmorItem("emerald_boots", EMERALD_ARMOR_MATERIAL, ArmorType.BOOTS, true);
+
+    // === CRYSTAL ARMOR SET (Prism Refraction, Magic Protection) ===
+    public static final Item CRYSTAL_HELMET = createArmorItem("crystal_helmet", CRYSTAL_ARMOR_MATERIAL, ArmorType.HELMET, true);
+    public static final Item CRYSTAL_CHESTPLATE = createArmorItem("crystal_chestplate", CRYSTAL_ARMOR_MATERIAL, ArmorType.CHESTPLATE, true);
+    public static final Item CRYSTAL_LEGGINGS = createArmorItem("crystal_leggings", CRYSTAL_ARMOR_MATERIAL, ArmorType.LEGGINGS, true);
+    public static final Item CRYSTAL_BOOTS = createArmorItem("crystal_boots", CRYSTAL_ARMOR_MATERIAL, ArmorType.BOOTS, true);
+
+    // === SHADOW ARMOR SET (Stealth, Evasion) ===
+    public static final Item SHADOW_HELMET = createArmorItem("shadow_helmet", SHADOW_ARMOR_MATERIAL, ArmorType.HELMET, false);
+    public static final Item SHADOW_CHESTPLATE = createArmorItem("shadow_chestplate", SHADOW_ARMOR_MATERIAL, ArmorType.CHESTPLATE, false);
+    public static final Item SHADOW_LEGGINGS = createArmorItem("shadow_leggings", SHADOW_ARMOR_MATERIAL, ArmorType.LEGGINGS, false);
+    public static final Item SHADOW_BOOTS = createArmorItem("shadow_boots", SHADOW_ARMOR_MATERIAL, ArmorType.BOOTS, false);
+
+    // === ASTRAL ARMOR SET (Cosmic Protection, Flight) ===
+    public static final Item ASTRAL_HELMET = createArmorItem("astral_helmet", ASTRAL_ARMOR_MATERIAL, ArmorType.HELMET, true);
+    public static final Item ASTRAL_CHESTPLATE = createArmorItem("astral_chestplate", ASTRAL_ARMOR_MATERIAL, ArmorType.CHESTPLATE, true);
+    public static final Item ASTRAL_LEGGINGS = createArmorItem("astral_leggings", ASTRAL_ARMOR_MATERIAL, ArmorType.LEGGINGS, true);
+    public static final Item ASTRAL_BOOTS = createArmorItem("astral_boots", ASTRAL_ARMOR_MATERIAL, ArmorType.BOOTS, true);
+
+    // === ENDER ARMOR SET (Blink, Dimensional Shift) ===
+    public static final Item ENDER_HELMET = createArmorItem("ender_helmet", ENDER_ARMOR_MATERIAL, ArmorType.HELMET, false);
+    public static final Item ENDER_CHESTPLATE = createArmorItem("ender_chestplate", ENDER_ARMOR_MATERIAL, ArmorType.CHESTPLATE, false);
+    public static final Item ENDER_LEGGINGS = createArmorItem("ender_leggings", ENDER_ARMOR_MATERIAL, ArmorType.LEGGINGS, false);
+    public static final Item ENDER_BOOTS = createArmorItem("ender_boots", ENDER_ARMOR_MATERIAL, ArmorType.BOOTS, false);
+
+    // === FROST ARMOR SET (Freeze Aura, Ice Protection) ===
+    public static final Item FROST_HELMET = createArmorItem("frost_helmet", FROST_ARMOR_MATERIAL, ArmorType.HELMET, false);
+    public static final Item FROST_CHESTPLATE = createArmorItem("frost_chestplate", FROST_ARMOR_MATERIAL, ArmorType.CHESTPLATE, false);
+    public static final Item FROST_LEGGINGS = createArmorItem("frost_leggings", FROST_ARMOR_MATERIAL, ArmorType.LEGGINGS, false);
+    public static final Item FROST_BOOTS = createArmorItem("frost_boots", FROST_ARMOR_MATERIAL, ArmorType.BOOTS, false);
 
     private static ArmorMaterial createArmorMaterial(String name, int durability, Map<ArmorType, Integer> defense,
             int enchantmentValue, float toughness, float knockbackResistance, net.minecraft.tags.TagKey<Item> repairIngredient) {
@@ -159,6 +206,33 @@ public class ModArmorItems {
         registerItem("emerald_chestplate", EMERALD_CHESTPLATE);
         registerItem("emerald_leggings", EMERALD_LEGGINGS);
         registerItem("emerald_boots", EMERALD_BOOTS);
+
+        // === NEW ARMOR SETS v1.5 ===
+        registerItem("crystal_helmet", CRYSTAL_HELMET);
+        registerItem("crystal_chestplate", CRYSTAL_CHESTPLATE);
+        registerItem("crystal_leggings", CRYSTAL_LEGGINGS);
+        registerItem("crystal_boots", CRYSTAL_BOOTS);
+
+        registerItem("shadow_helmet", SHADOW_HELMET);
+        registerItem("shadow_chestplate", SHADOW_CHESTPLATE);
+        registerItem("shadow_leggings", SHADOW_LEGGINGS);
+        registerItem("shadow_boots", SHADOW_BOOTS);
+
+        registerItem("astral_helmet", ASTRAL_HELMET);
+        registerItem("astral_chestplate", ASTRAL_CHESTPLATE);
+        registerItem("astral_leggings", ASTRAL_LEGGINGS);
+        registerItem("astral_boots", ASTRAL_BOOTS);
+
+        // === NEW ARMOR SETS v1.6 ===
+        registerItem("ender_helmet", ENDER_HELMET);
+        registerItem("ender_chestplate", ENDER_CHESTPLATE);
+        registerItem("ender_leggings", ENDER_LEGGINGS);
+        registerItem("ender_boots", ENDER_BOOTS);
+
+        registerItem("frost_helmet", FROST_HELMET);
+        registerItem("frost_chestplate", FROST_CHESTPLATE);
+        registerItem("frost_leggings", FROST_LEGGINGS);
+        registerItem("frost_boots", FROST_BOOTS);
     }
 
     private static void registerItem(String name, Item item) {

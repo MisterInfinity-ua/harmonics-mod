@@ -22,7 +22,7 @@ import org.slf4j.LoggerFactory;
 /**
  * Harmonics - Unified Mod (Weapons + Instruments + Armor)
  * 
- * Total: 89 items (20 weapons + 45 instruments + 24 armor)
+ * Total: 125 items (36 weapons + 45 instruments + 44 armor)
  */
 public class Harmonics implements ModInitializer {
     public static final String MOD_ID = "harmonics";
@@ -45,15 +45,15 @@ public class Harmonics implements ModInitializer {
         ModRecipes.init();
         ModWeapons.init();
         
-        // Register armor (24 items across 6 material types - Copper removed)
-        LOGGER.info("[Harmonics] Loading Extra Armor content...");
+        // Register armor (44 items across 11 material types)
+        LOGGER.info("[Harmonics] Loading Armor content...");
         ModArmorItems.registerArmorItems();
 
         registerCreativeTab();
         
         LOGGER.info("====================================");
         LOGGER.info("[Harmonics] Unified mod loaded successfully!");
-        LOGGER.info("Total items: 89 (20 weapons + 45 instruments + 24 armor)");
+        LOGGER.info("Total items: 125 (36 weapons + 45 instruments + 44 armor)");
         LOGGER.info("====================================");
     }
 
@@ -102,6 +102,36 @@ public class Harmonics implements ModInitializer {
                 output.accept(ModArmorItems.EMERALD_CHESTPLATE);
                 output.accept(ModArmorItems.EMERALD_LEGGINGS);
                 output.accept(ModArmorItems.EMERALD_BOOTS);
+
+                // Crystal Armor (v1.5)
+                output.accept(ModArmorItems.CRYSTAL_HELMET);
+                output.accept(ModArmorItems.CRYSTAL_CHESTPLATE);
+                output.accept(ModArmorItems.CRYSTAL_LEGGINGS);
+                output.accept(ModArmorItems.CRYSTAL_BOOTS);
+
+                // Shadow Armor (v1.5)
+                output.accept(ModArmorItems.SHADOW_HELMET);
+                output.accept(ModArmorItems.SHADOW_CHESTPLATE);
+                output.accept(ModArmorItems.SHADOW_LEGGINGS);
+                output.accept(ModArmorItems.SHADOW_BOOTS);
+
+                // Astral Armor (v1.5)
+                output.accept(ModArmorItems.ASTRAL_HELMET);
+                output.accept(ModArmorItems.ASTRAL_CHESTPLATE);
+                output.accept(ModArmorItems.ASTRAL_LEGGINGS);
+                output.accept(ModArmorItems.ASTRAL_BOOTS);
+
+                // Ender Armor (v1.6)
+                output.accept(ModArmorItems.ENDER_HELMET);
+                output.accept(ModArmorItems.ENDER_CHESTPLATE);
+                output.accept(ModArmorItems.ENDER_LEGGINGS);
+                output.accept(ModArmorItems.ENDER_BOOTS);
+
+                // Frost Armor (v1.6)
+                output.accept(ModArmorItems.FROST_HELMET);
+                output.accept(ModArmorItems.FROST_CHESTPLATE);
+                output.accept(ModArmorItems.FROST_LEGGINGS);
+                output.accept(ModArmorItems.FROST_BOOTS);
             })
             .build();
 

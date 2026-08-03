@@ -1,0 +1,416 @@
+{
+  "display": {
+    "icon": "minecraft:iron_chestplate",
+    "title": {
+      "translate": "advancement.harmonics.armorer.title"
+    },
+    "description": {
+      "translate": "advancement.harmonics.armorer.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "harmonics:recipes/root",
+  "criteria": {
+    "crafted_wooden_helmet": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/wooden_helmet"
+      }
+    },
+    "crafted_wooden_chestplate": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/wooden_chestplate"
+      }
+    },
+    "crafted_wooden_leggings": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/wooden_leggings"
+      }
+    },
+    "crafted_wooden_boots": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/wooden_boots"
+      }
+    },
+    "crafted_stone_helmet": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/stone_helmet"
+      }
+    },
+    "crafted_stone_chestplate": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/stone_chestplate"
+      }
+    },
+    "crafted_stone_leggings": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/stone_leggings"
+      }
+    },
+    "crafted_stone_boots": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/stone_boots"
+      }
+    },
+    "crafted_obsidian_helmet": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/obsidian_helmet"
+      }
+    },
+    "crafted_obsidian_chestplate": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/obsidian_chestplate"
+      }
+    },
+    "crafted_obsidian_leggings": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/obsidian_leggings"
+      }
+    },
+    "crafted_obsidian_boots": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/obsidian_boots"
+      }
+    },
+    "crafted_bone_helmet": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/bone_helmet"
+      }
+    },
+    "crafted_bone_chestplate": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/bone_chestplate"
+      }
+    },
+    "crafted_bone_leggings": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/bone_leggings"
+      }
+    },
+    "crafted_bone_boots": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/bone_boots"
+      }
+    },
+    "crafted_amethyst_helmet": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/amethyst_helmet"
+      }
+    },
+    "crafted_amethyst_chestplate": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/amethyst_chestplate"
+      }
+    },
+    "crafted_amethyst_leggings": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/amethyst_leggings"
+      }
+    },
+    "crafted_amethyst_boots": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/amethyst_boots"
+      }
+    },
+    "crafted_emerald_helmet": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/emerald_helmet"
+      }
+    },
+    "crafted_emerald_chestplate": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/emerald_chestplate"
+      }
+    },
+    "crafted_emerald_leggings": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/emerald_leggings"
+      }
+    },
+    "crafted_emerald_boots": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/emerald_boots"
+      }
+    },
+    "crafted_crystal_helmet": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/crystal_helmet"
+      }
+    },
+    "crafted_crystal_chestplate": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/crystal_chestplate"
+      }
+    },
+    "crafted_crystal_leggings": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/crystal_leggings"
+      }
+    },
+    "crafted_crystal_boots": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/crystal_boots"
+      }
+    },
+    "crafted_shadow_helmet": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/shadow_helmet"
+      }
+    },
+    "crafted_shadow_chestplate": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/shadow_chestplate"
+      }
+    },
+    "crafted_shadow_leggings": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/shadow_leggings"
+      }
+    },
+    "crafted_shadow_boots": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/shadow_boots"
+      }
+    },
+    "crafted_astral_helmet": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/astral_helmet"
+      }
+    },
+    "crafted_astral_chestplate": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/astral_chestplate"
+      }
+    },
+    "crafted_astral_leggings": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/astral_leggings"
+      }
+    },
+    "crafted_astral_boots": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/astral_boots"
+      }
+    },
+    "crafted_ender_helmet": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/ender_helmet"
+      }
+    },
+    "crafted_ender_chestplate": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/ender_chestplate"
+      }
+    },
+    "crafted_ender_leggings": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/ender_leggings"
+      }
+    },
+    "crafted_ender_boots": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/ender_boots"
+      }
+    },
+    "crafted_frost_helmet": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/frost_helmet"
+      }
+    },
+    "crafted_frost_chestplate": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/frost_chestplate"
+      }
+    },
+    "crafted_frost_leggings": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/frost_leggings"
+      }
+    },
+    "crafted_frost_boots": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/frost_boots"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "crafted_wooden_helmet"
+    ],
+    [
+      "crafted_wooden_chestplate"
+    ],
+    [
+      "crafted_wooden_leggings"
+    ],
+    [
+      "crafted_wooden_boots"
+    ],
+    [
+      "crafted_stone_helmet"
+    ],
+    [
+      "crafted_stone_chestplate"
+    ],
+    [
+      "crafted_stone_leggings"
+    ],
+    [
+      "crafted_stone_boots"
+    ],
+    [
+      "crafted_obsidian_helmet"
+    ],
+    [
+      "crafted_obsidian_chestplate"
+    ],
+    [
+      "crafted_obsidian_leggings"
+    ],
+    [
+      "crafted_obsidian_boots"
+    ],
+    [
+      "crafted_bone_helmet"
+    ],
+    [
+      "crafted_bone_chestplate"
+    ],
+    [
+      "crafted_bone_leggings"
+    ],
+    [
+      "crafted_bone_boots"
+    ],
+    [
+      "crafted_amethyst_helmet"
+    ],
+    [
+      "crafted_amethyst_chestplate"
+    ],
+    [
+      "crafted_amethyst_leggings"
+    ],
+    [
+      "crafted_amethyst_boots"
+    ],
+    [
+      "crafted_emerald_helmet"
+    ],
+    [
+      "crafted_emerald_chestplate"
+    ],
+    [
+      "crafted_emerald_leggings"
+    ],
+    [
+      "crafted_emerald_boots"
+    ],
+    [
+      "crafted_crystal_helmet"
+    ],
+    [
+      "crafted_crystal_chestplate"
+    ],
+    [
+      "crafted_crystal_leggings"
+    ],
+    [
+      "crafted_crystal_boots"
+    ],
+    [
+      "crafted_shadow_helmet"
+    ],
+    [
+      "crafted_shadow_chestplate"
+    ],
+    [
+      "crafted_shadow_leggings"
+    ],
+    [
+      "crafted_shadow_boots"
+    ],
+    [
+      "crafted_astral_helmet"
+    ],
+    [
+      "crafted_astral_chestplate"
+    ],
+    [
+      "crafted_astral_leggings"
+    ],
+    [
+      "crafted_astral_boots"
+    ],
+    [
+      "crafted_ender_helmet"
+    ],
+    [
+      "crafted_ender_chestplate"
+    ],
+    [
+      "crafted_ender_leggings"
+    ],
+    [
+      "crafted_ender_boots"
+    ],
+    [
+      "crafted_frost_helmet"
+    ],
+    [
+      "crafted_frost_chestplate"
+    ],
+    [
+      "crafted_frost_leggings"
+    ],
+    [
+      "crafted_frost_boots"
+    ]
+  ]
+}

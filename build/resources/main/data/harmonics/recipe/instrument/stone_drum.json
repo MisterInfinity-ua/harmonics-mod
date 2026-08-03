@@ -13,5 +13,6 @@
   "result": {
     "id": "harmonics:stone_drum",
     "count": 1
-  }
+  },
+  "show_notification": true
 }

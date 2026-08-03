@@ -21,9 +21,11 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.Tool;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.phys.AABB;
+import net.minecraft.util.RandomSource;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -167,14 +169,21 @@ public class ModWeaponItem extends Item {
 
     @Override
     public void hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        float damage = getAttackDamage();
+        // Damage is now handled by the vanilla attribute system (attack_damage component).
+        // hurtEnemy only handles special effects and durability.
+
+        // Apply masterwork bonus damage (extra damage on top of base attribute)
         if (isMasterwork(stack)) {
-            damage *= 1.5f;
+            float extraDamage = getAttackDamage() * 0.5f;
+            // Bypass invulnerability frames for masterwork bonus
+            int prevInvul = target.invulnerableTime;
+            target.invulnerableTime = 0;
+            var bonusSource = attacker instanceof Player player
+                    ? attacker.level().damageSources().playerAttack(player)
+                    : attacker.level().damageSources().mobAttack(attacker);
+            target.hurt(bonusSource, extraDamage);
+            target.invulnerableTime = prevInvul;
         }
-        var damageSource = attacker instanceof Player player
-                ? attacker.level().damageSources().playerAttack(player)
-                : attacker.level().damageSources().mobAttack(attacker);
-        target.hurt(damageSource, damage);
 
         if (!attacker.level().isClientSide()) {
             applySpecialEffect(stack, target, attacker);
@@ -235,7 +244,49 @@ public class ModWeaponItem extends Item {
                             (int) (100.0f * multiplier), 0, false, true));
                 }
             }
-            case NONE -> { /* no-op */ }
+            case PRISM -> {
+                float damage = getAttackDamage() * 0.5f * multiplier;
+                for (int i = 0; i < 3; i++) {
+                    target.hurt(level.damageSources().magic(), damage);
+                }
+                target.addEffect(new MobEffectInstance(MobEffects.BLINDNESS,
+                        (int) (30.0f * multiplier), 2, false, true));
+                if (attacker instanceof Player player && masterwork) {
+                    player.addEffect(new MobEffectInstance(MobEffects.GLOWING,
+                            (int) (60.0f * multiplier), 0, false, true));
+                }
+            }
+            case SHADOW_STEP -> {
+                if (attacker instanceof Player player && masterwork) {
+                    player.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY,
+                            (int) (40.0f * multiplier), 0, false, true));
+                }
+                target.addEffect(new MobEffectInstance(MobEffects.WEAKNESS,
+                        (int) (50.0f * multiplier), 2, false, true));
+                target.addEffect(new MobEffectInstance(MobEffects.SLOWNESS,
+                        (int) (50.0f * multiplier), 2, false, true));
+            }
+            case BLINK -> {
+                if (masterwork && attacker instanceof Player player) {
+                    double newX = player.getX() + (Math.random() - 0.5) * 8.0;
+                    double newZ = player.getZ() + (Math.random() - 0.5) * 8.0;
+                    player.teleportTo(newX, player.getY(), newZ);
+                }
+                target.addEffect(new MobEffectInstance(MobEffects.LEVITATION,
+                        (int) (20.0f * multiplier), 1, false, true));
+                target.addEffect(new MobEffectInstance(MobEffects.BLINDNESS,
+                        (int) (40.0f * multiplier), 0, false, true));
+            }
+            case FREEZE -> {
+                target.addEffect(new MobEffectInstance(MobEffects.SLOWNESS,
+                        (int) (60.0f * multiplier), 2, false, true));
+                target.addEffect(new MobEffectInstance(MobEffects.WEAKNESS,
+                        (int) (60.0f * multiplier), 1, false, true));
+                if (masterwork && attacker instanceof Player player) {
+                    player.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING,
+                            (int) (80.0f * multiplier), 0, false, true));
+                }
+            }
         }
     }
 

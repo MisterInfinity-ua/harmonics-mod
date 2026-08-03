@@ -1,0 +1,344 @@
+{
+  "display": {
+    "icon": "minecraft:netherite_sword",
+    "title": {
+      "translate": "advancement.harmonics.weaponsmith.title"
+    },
+    "description": {
+      "translate": "advancement.harmonics.weaponsmith.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "harmonics:recipes/root",
+  "criteria": {
+    "crafted_obsidian_sword": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/obsidian_sword"
+      }
+    },
+    "crafted_obsidian_axe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/obsidian_axe"
+      }
+    },
+    "crafted_obsidian_shovel": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/obsidian_shovel"
+      }
+    },
+    "crafted_obsidian_pickaxe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/obsidian_pickaxe"
+      }
+    },
+    "crafted_lava_sword": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/lava_sword"
+      }
+    },
+    "crafted_lava_axe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/lava_axe"
+      }
+    },
+    "crafted_lava_shovel": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/lava_shovel"
+      }
+    },
+    "crafted_lava_pickaxe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/lava_pickaxe"
+      }
+    },
+    "crafted_netherite_plus_sword": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/netherite_plus_sword"
+      }
+    },
+    "crafted_netherite_plus_axe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/netherite_plus_axe"
+      }
+    },
+    "crafted_netherite_plus_shovel": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/netherite_plus_shovel"
+      }
+    },
+    "crafted_netherite_plus_pickaxe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/netherite_plus_pickaxe"
+      }
+    },
+    "crafted_wither_sword": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/wither_sword"
+      }
+    },
+    "crafted_wither_axe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/wither_axe"
+      }
+    },
+    "crafted_wither_shovel": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/wither_shovel"
+      }
+    },
+    "crafted_wither_pickaxe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/wither_pickaxe"
+      }
+    },
+    "crafted_crystal_sword": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/crystal_sword"
+      }
+    },
+    "crafted_crystal_axe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/crystal_axe"
+      }
+    },
+    "crafted_crystal_shovel": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/crystal_shovel"
+      }
+    },
+    "crafted_crystal_pickaxe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/crystal_pickaxe"
+      }
+    },
+    "crafted_shadow_sword": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/shadow_sword"
+      }
+    },
+    "crafted_shadow_axe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/shadow_axe"
+      }
+    },
+    "crafted_shadow_shovel": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/shadow_shovel"
+      }
+    },
+    "crafted_shadow_pickaxe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/shadow_pickaxe"
+      }
+    },
+    "crafted_ender_sword": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/ender_sword"
+      }
+    },
+    "crafted_ender_axe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/ender_axe"
+      }
+    },
+    "crafted_ender_shovel": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/ender_shovel"
+      }
+    },
+    "crafted_ender_pickaxe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/ender_pickaxe"
+      }
+    },
+    "crafted_frost_sword": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/frost_sword"
+      }
+    },
+    "crafted_frost_axe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/frost_axe"
+      }
+    },
+    "crafted_frost_shovel": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/frost_shovel"
+      }
+    },
+    "crafted_frost_pickaxe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/frost_pickaxe"
+      }
+    },
+    "crafted_void_sword": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/void_sword"
+      }
+    },
+    "crafted_void_axe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/void_axe"
+      }
+    },
+    "crafted_void_shovel": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/void_shovel"
+      }
+    },
+    "crafted_void_pickaxe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/void_pickaxe"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "crafted_obsidian_sword"
+    ],
+    [
+      "crafted_obsidian_axe"
+    ],
+    [
+      "crafted_obsidian_shovel"
+    ],
+    [
+      "crafted_obsidian_pickaxe"
+    ],
+    [
+      "crafted_lava_sword"
+    ],
+    [
+      "crafted_lava_axe"
+    ],
+    [
+      "crafted_lava_shovel"
+    ],
+    [
+      "crafted_lava_pickaxe"
+    ],
+    [
+      "crafted_netherite_plus_sword"
+    ],
+    [
+      "crafted_netherite_plus_axe"
+    ],
+    [
+      "crafted_netherite_plus_shovel"
+    ],
+    [
+      "crafted_netherite_plus_pickaxe"
+    ],
+    [
+      "crafted_wither_sword"
+    ],
+    [
+      "crafted_wither_axe"
+    ],
+    [
+      "crafted_wither_shovel"
+    ],
+    [
+      "crafted_wither_pickaxe"
+    ],
+    [
+      "crafted_crystal_sword"
+    ],
+    [
+      "crafted_crystal_axe"
+    ],
+    [
+      "crafted_crystal_shovel"
+    ],
+    [
+      "crafted_crystal_pickaxe"
+    ],
+    [
+      "crafted_shadow_sword"
+    ],
+    [
+      "crafted_shadow_axe"
+    ],
+    [
+      "crafted_shadow_shovel"
+    ],
+    [
+      "crafted_shadow_pickaxe"
+    ],
+    [
+      "crafted_ender_sword"
+    ],
+    [
+      "crafted_ender_axe"
+    ],
+    [
+      "crafted_ender_shovel"
+    ],
+    [
+      "crafted_ender_pickaxe"
+    ],
+    [
+      "crafted_frost_sword"
+    ],
+    [
+      "crafted_frost_axe"
+    ],
+    [
+      "crafted_frost_shovel"
+    ],
+    [
+      "crafted_frost_pickaxe"
+    ],
+    [
+      "crafted_void_sword"
+    ],
+    [
+      "crafted_void_axe"
+    ],
+    [
+      "crafted_void_shovel"
+    ],
+    [
+      "crafted_void_pickaxe"
+    ]
+  ]
+}

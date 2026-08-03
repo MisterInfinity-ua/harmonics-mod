@@ -1,0 +1,72 @@
+{
+  "parent": "harmonics:recipes/root",
+  "criteria": {
+    "has_ingredient": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          "minecraft:water_bucket"
+        ]
+      }
+    },
+    "has_recipe_0": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:instrument/water_chimes"
+      }
+    },
+    "has_recipe_1": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:instrument/water_drum"
+      }
+    },
+    "has_recipe_2": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:instrument/water_flute"
+      }
+    },
+    "has_recipe_3": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:instrument/water_horn"
+      }
+    },
+    "has_recipe_4": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:instrument/water_lute"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_ingredient"
+    ],
+    [
+      "has_recipe_0"
+    ],
+    [
+      "has_recipe_1"
+    ],
+    [
+      "has_recipe_2"
+    ],
+    [
+      "has_recipe_3"
+    ],
+    [
+      "has_recipe_4"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "harmonics:instrument/water_chimes",
+      "harmonics:instrument/water_drum",
+      "harmonics:instrument/water_flute",
+      "harmonics:instrument/water_horn",
+      "harmonics:instrument/water_lute"
+    ]
+  }
+}

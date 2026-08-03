@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XS",
+    " S"
+  ],
+  "key": {
+    "X": "minecraft:prismarine_shard",
+    "S": "minecraft:stick"
+  },
+  "result": {
+    "id": "harmonics:crystal_axe",
+    "count": 1
+  },
+  "show_notification": true
+}

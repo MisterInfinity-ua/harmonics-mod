@@ -13,5 +13,6 @@
   "result": {
     "id": "harmonics:water_lute",
     "count": 1
-  }
+  },
+  "show_notification": true
 }

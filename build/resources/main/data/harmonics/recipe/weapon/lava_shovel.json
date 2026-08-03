@@ -12,5 +12,6 @@
   "result": {
     "id": "harmonics:lava_shovel",
     "count": 1
-  }
+  },
+  "show_notification": true
 }

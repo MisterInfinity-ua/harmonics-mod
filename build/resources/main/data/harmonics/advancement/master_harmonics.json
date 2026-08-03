@@ -1,0 +1,281 @@
+{
+  "display": {
+    "icon": "minecraft:nether_star",
+    "title": {
+      "translate": "advancement.harmonics.master.title"
+    },
+    "description": {
+      "translate": "advancement.harmonics.master.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "harmonics:armorer",
+  "criteria": {
+    "set_armor_wooden": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/wooden_helmet"
+      }
+    },
+    "set_armor_stone": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/stone_helmet"
+      }
+    },
+    "set_armor_obsidian": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/obsidian_helmet"
+      }
+    },
+    "set_armor_bone": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/bone_helmet"
+      }
+    },
+    "set_armor_amethyst": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/amethyst_helmet"
+      }
+    },
+    "set_armor_emerald": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/emerald_helmet"
+      }
+    },
+    "set_armor_crystal": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/crystal_helmet"
+      }
+    },
+    "set_armor_shadow": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/shadow_helmet"
+      }
+    },
+    "set_armor_astral": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/astral_helmet"
+      }
+    },
+    "set_armor_ender": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/ender_helmet"
+      }
+    },
+    "set_armor_frost": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/frost_helmet"
+      }
+    },
+    "set_weapon_obsidian": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/obsidian_sword"
+      }
+    },
+    "set_weapon_lava": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/lava_sword"
+      }
+    },
+    "set_weapon_netherite_plus": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/netherite_plus_sword"
+      }
+    },
+    "set_weapon_wither": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/wither_sword"
+      }
+    },
+    "set_weapon_crystal": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/crystal_sword"
+      }
+    },
+    "set_weapon_shadow": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/shadow_sword"
+      }
+    },
+    "set_weapon_ender": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/ender_sword"
+      }
+    },
+    "set_weapon_frost": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/frost_sword"
+      }
+    },
+    "set_weapon_void": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/void_sword"
+      }
+    },
+    "set_instrument_wood": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:instrument/wood_flute"
+      }
+    },
+    "set_instrument_stone": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:instrument/stone_flute"
+      }
+    },
+    "set_instrument_iron": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:instrument/iron_flute"
+      }
+    },
+    "set_instrument_gold": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:instrument/gold_flute"
+      }
+    },
+    "set_instrument_diamond": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:instrument/diamond_flute"
+      }
+    },
+    "set_instrument_obsidian": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:instrument/obsidian_flute"
+      }
+    },
+    "set_instrument_netherite": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:instrument/netherite_flute"
+      }
+    },
+    "set_instrument_water": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:instrument/water_flute"
+      }
+    },
+    "set_instrument_lava": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:instrument/lava_flute"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "set_armor_wooden"
+    ],
+    [
+      "set_armor_stone"
+    ],
+    [
+      "set_armor_obsidian"
+    ],
+    [
+      "set_armor_bone"
+    ],
+    [
+      "set_armor_amethyst"
+    ],
+    [
+      "set_armor_emerald"
+    ],
+    [
+      "set_armor_crystal"
+    ],
+    [
+      "set_armor_shadow"
+    ],
+    [
+      "set_armor_astral"
+    ],
+    [
+      "set_armor_ender"
+    ],
+    [
+      "set_armor_frost"
+    ],
+    [
+      "set_weapon_obsidian"
+    ],
+    [
+      "set_weapon_lava"
+    ],
+    [
+      "set_weapon_netherite_plus"
+    ],
+    [
+      "set_weapon_wither"
+    ],
+    [
+      "set_weapon_crystal"
+    ],
+    [
+      "set_weapon_shadow"
+    ],
+    [
+      "set_weapon_ender"
+    ],
+    [
+      "set_weapon_frost"
+    ],
+    [
+      "set_weapon_void"
+    ],
+    [
+      "set_instrument_wood"
+    ],
+    [
+      "set_instrument_stone"
+    ],
+    [
+      "set_instrument_iron"
+    ],
+    [
+      "set_instrument_gold"
+    ],
+    [
+      "set_instrument_diamond"
+    ],
+    [
+      "set_instrument_obsidian"
+    ],
+    [
+      "set_instrument_netherite"
+    ],
+    [
+      "set_instrument_water"
+    ],
+    [
+      "set_instrument_lava"
+    ]
+  ]
+}

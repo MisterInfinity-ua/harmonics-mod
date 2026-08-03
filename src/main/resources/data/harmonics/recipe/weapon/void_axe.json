@@ -12,5 +12,6 @@
   "result": {
     "id": "harmonics:void_axe",
     "count": 1
-  }
+  },
+  "show_notification": true
 }

@@ -1,0 +1,62 @@
+{
+  "parent": "harmonics:recipes/root",
+  "criteria": {
+    "has_ingredient": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          "minecraft:prismarine_shard"
+        ]
+      }
+    },
+    "has_recipe_0": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/crystal_helmet"
+      }
+    },
+    "has_recipe_1": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/crystal_chestplate"
+      }
+    },
+    "has_recipe_2": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/crystal_leggings"
+      }
+    },
+    "has_recipe_3": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/crystal_boots"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_ingredient"
+    ],
+    [
+      "has_recipe_0"
+    ],
+    [
+      "has_recipe_1"
+    ],
+    [
+      "has_recipe_2"
+    ],
+    [
+      "has_recipe_3"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "harmonics:armor/crystal_helmet",
+      "harmonics:armor/crystal_chestplate",
+      "harmonics:armor/crystal_leggings",
+      "harmonics:armor/crystal_boots"
+    ]
+  }
+}

@@ -11,5 +11,6 @@
   "result": {
     "id": "harmonics:obsidian_helmet",
     "count": 1
-  }
+  },
+  "show_notification": true
 }

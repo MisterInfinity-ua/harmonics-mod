@@ -11,5 +11,6 @@
   "result": {
     "id": "harmonics:emerald_helmet",
     "count": 1
-  }
+  },
+  "show_notification": true
 }

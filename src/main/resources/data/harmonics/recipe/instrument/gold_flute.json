@@ -13,5 +13,6 @@
   "result": {
     "id": "harmonics:gold_flute",
     "count": 1
-  }
+  },
+  "show_notification": true
 }

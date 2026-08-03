@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "harmonics:item/crystal_shovel_masterwork"
+  }
+}

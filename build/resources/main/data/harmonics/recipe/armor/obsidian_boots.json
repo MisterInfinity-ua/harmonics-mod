@@ -11,5 +11,6 @@
   "result": {
     "id": "harmonics:obsidian_boots",
     "count": 1
-  }
+  },
+  "show_notification": true
 }
