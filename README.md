@@ -31,6 +31,14 @@ Craft **two identical base items** together in any crafting grid to create a **M
 
 > The exact set of materials and total item count grows with every release. See the **Releases** tab and the [changelog](CHANGELOG.md) for the current contents.
 
+### HD Textures (32x)
+Harmonics ships an optional **Harmonics 32x** resource pack (2x upscaled textures matching the style of the *Faithful 32x* pack):
+
+- **Fabric:** the pack is bundled inside the mod jar. Open the resource-pack screen and enable **"Harmonics 32x"** (it is off by default).
+- **NeoForge / any loader:** a standalone `packs/Harmonics32x.zip` is included in the repository and with releases — drop it in your `.minecraft/resourcepacks` folder and enable it.
+
+Enable **Harmonics 32x** together with **Faithful 32x** for a consistent 32x look. The mod's base textures stay 16x, so nothing changes if the pack is off.
+
 ---
 
 ## Installation

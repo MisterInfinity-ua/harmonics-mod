@@ -11,6 +11,9 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.creativetab.v1.FabricCreativeModeTab;
+import net.fabricmc.fabric.api.resource.v1.ResourceLoader;
+import net.fabricmc.fabric.api.resource.v1.pack.PackActivationType;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -50,6 +53,7 @@ public class Harmonics implements ModInitializer {
         ModRecipes.init();
         ModWeapons.init();
 
+        registerBuiltinPacks();
         registerRubyWorldgen();
         
         // Register armor (44 items across 11 material types)
@@ -62,6 +66,19 @@ public class Harmonics implements ModInitializer {
         LOGGER.info("[Harmonics] Unified mod loaded successfully!");
         LOGGER.info("Total items: 130 (36 weapons + 50 instruments + 44 armor)");
         LOGGER.info("====================================");
+    }
+
+    private void registerBuiltinPacks() {
+        // Optional "Harmonics 32x" pack bundled inside the jar. It shows up in the
+        // resource-pack screen (off by default) so players can toggle it on beside
+        // the vanilla "Faithful 32x" pack for a consistent 32x look. Only the 32x
+        // textures live in the pack, so nothing changes for 16x gameplay.
+        var container = FabricLoader.getInstance().getModContainer(MOD_ID).orElseThrow();
+        ResourceLoader.registerBuiltinPack(
+            Identifier.fromNamespaceAndPath(MOD_ID, "32x"),
+            container,
+            PackActivationType.NORMAL
+        );
     }
 
     private void registerRubyWorldgen() {

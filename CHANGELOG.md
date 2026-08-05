@@ -35,6 +35,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Ruby material (weapons, armor, equipment, gem) — see Unreleased.
+- Optional **Harmonics 32x** resource pack (2x upscaled textures) to pair with
+  *Faithful 32x*. Bundled in the Fabric jar (toggled from the resource-pack
+  screen) and provided as a standalone `.zip` in `packs/` for any loader.
 
 ## [1.8.0] - Scheduled
 
