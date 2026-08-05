@@ -229,6 +229,30 @@
       "conditions": {
         "recipe": "harmonics:weapon/void_pickaxe"
       }
+    },
+    "crafted_ruby_sword": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/ruby_sword"
+      }
+    },
+    "crafted_ruby_axe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/ruby_axe"
+      }
+    },
+    "crafted_ruby_shovel": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/ruby_shovel"
+      }
+    },
+    "crafted_ruby_pickaxe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/ruby_pickaxe"
+      }
     }
   },
   "requirements": [
@@ -339,6 +363,18 @@
     ],
     [
       "crafted_void_pickaxe"
+    ],
+    [
+      "crafted_ruby_sword"
+    ],
+    [
+      "crafted_ruby_axe"
+    ],
+    [
+      "crafted_ruby_shovel"
+    ],
+    [
+      "crafted_ruby_pickaxe"
     ]
   ]
 }

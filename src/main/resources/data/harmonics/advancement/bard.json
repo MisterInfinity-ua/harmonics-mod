@@ -283,6 +283,36 @@
       "conditions": {
         "recipe": "harmonics:instrument/lava_lute"
       }
+    },
+    "crafted_void_chimes": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:instrument/void_chimes"
+      }
+    },
+    "crafted_void_drum": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:instrument/void_drum"
+      }
+    },
+    "crafted_void_flute": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:instrument/void_flute"
+      }
+    },
+    "crafted_void_horn": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:instrument/void_horn"
+      }
+    },
+    "crafted_void_lute": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:instrument/void_lute"
+      }
     }
   },
   "requirements": [
@@ -420,6 +450,21 @@
     ],
     [
       "crafted_lava_lute"
+    ],
+    [
+      "crafted_void_chimes"
+    ],
+    [
+      "crafted_void_drum"
+    ],
+    [
+      "crafted_void_flute"
+    ],
+    [
+      "crafted_void_horn"
+    ],
+    [
+      "crafted_void_lute"
     ]
   ]
 }

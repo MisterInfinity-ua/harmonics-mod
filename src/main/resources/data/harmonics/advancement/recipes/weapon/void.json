@@ -5,7 +5,9 @@
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
-          "minecraft:end_crystal"
+          {
+            "items": "minecraft:end_crystal"
+          }
         ]
       }
     },

@@ -1,0 +1,20 @@
+# Gradle
+.gradle/
+build/
+neoforge/build/
+neoforge/.gradle/
+neoforge/run/
+
+# Python
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
+# Archives (built artifacts / zip snapshots)
+*.zip
+*.jar
+
+# Logs
+install.log

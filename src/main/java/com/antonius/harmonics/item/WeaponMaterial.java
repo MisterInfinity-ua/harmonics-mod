@@ -9,7 +9,8 @@ public enum WeaponMaterial {
     SHADOW(13.0f, 1100, 16, -2.6f, 8.0f, 3, SpecialEffect.SHADOW_STEP, 0xFF2A1A3A),
     ENDER(18.0f, 1800, 22, -2.4f, 9.5f, 4, SpecialEffect.BLINK, 0xFF8A2BE2),
     FROST(13.0f, 700, 15, -2.6f, 7.0f, 3, SpecialEffect.FREEZE, 0xFF44CCFF),
-    VOID(18.0f, 2000, 30, -2.4f, 12.0f, 5, SpecialEffect.VOID_TOUCH, 0xFF34123A);
+    VOID(18.0f, 2000, 30, -2.4f, 12.0f, 5, SpecialEffect.VOID_TOUCH, 0xFF34123A),
+    RUBY(15.0f, 1400, 24, -2.5f, 9.0f, 4, SpecialEffect.LIFE_STEAL, 0xFFC21E2B);
 
     private final float attackDamage;
     private final int durability;
@@ -55,6 +56,7 @@ public enum WeaponMaterial {
         SHADOW_STEP,
         BLINK,
         FREEZE,
+        LIFE_STEAL,
         NONE
     }
 }

@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "harmonics:item/amethyst_helmet"
-  }
-}

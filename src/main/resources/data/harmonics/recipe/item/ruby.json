@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "RRR",
+    "RRR",
+    "RRR"
+  ],
+  "key": {
+    "R": "minecraft:redstone"
+  },
+  "result": {
+    "id": "harmonics:ruby",
+    "count": 1
+  },
+  "show_notification": true
+}

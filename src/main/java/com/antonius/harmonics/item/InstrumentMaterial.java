@@ -19,7 +19,8 @@ public enum InstrumentMaterial {
     OBSIDIAN(24, 512, 0.75f, false), // obsidian: heavy, ominous, near-unbreakable, nether-safe
     NETHERITE(36, 640, 1.0f, false),
     WATER(20, 200, 0.9f, true),     // elemental: regen aura when played
-    LAVA(20, 200, 0.9f, true);      // elemental: fire resistance aura when played
+    LAVA(20, 200, 0.9f, true),      // elemental: fire resistance aura when played
+    VOID(44, 1000, 1.2f, false);    // void: ominous, far-reaching, near-unbreakable; darkens hostiles nearby
 
     private final int range;
     private final int durability;

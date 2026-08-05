@@ -22,7 +22,7 @@ import org.slf4j.LoggerFactory;
 /**
  * Harmonics - Unified Mod (Weapons + Instruments + Armor)
  * 
- * Total: 125 items (36 weapons + 45 instruments + 44 armor)
+ * Total: 130 items (36 weapons + 50 instruments + 44 armor)
  */
 public class Harmonics implements ModInitializer {
     public static final String MOD_ID = "harmonics";
@@ -53,7 +53,7 @@ public class Harmonics implements ModInitializer {
         
         LOGGER.info("====================================");
         LOGGER.info("[Harmonics] Unified mod loaded successfully!");
-        LOGGER.info("Total items: 125 (36 weapons + 45 instruments + 44 armor)");
+        LOGGER.info("Total items: 130 (36 weapons + 50 instruments + 44 armor)");
         LOGGER.info("====================================");
     }
 
@@ -132,6 +132,15 @@ public class Harmonics implements ModInitializer {
                 output.accept(ModArmorItems.FROST_CHESTPLATE);
                 output.accept(ModArmorItems.FROST_LEGGINGS);
                 output.accept(ModArmorItems.FROST_BOOTS);
+
+                // Ruby gem (v1.6)
+                output.accept(ModItems.RUBY);
+
+                // Ruby Armor (v1.6)
+                output.accept(ModArmorItems.RUBY_HELMET);
+                output.accept(ModArmorItems.RUBY_CHESTPLATE);
+                output.accept(ModArmorItems.RUBY_LEGGINGS);
+                output.accept(ModArmorItems.RUBY_BOOTS);
             })
             .build();
 

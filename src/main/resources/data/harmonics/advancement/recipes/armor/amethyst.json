@@ -5,7 +5,9 @@
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
-          "minecraft:amethyst_shard"
+          {
+            "items": "minecraft:amethyst_shard"
+          }
         ]
       }
     },

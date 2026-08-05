@@ -11,12 +11,12 @@ import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.item.equipment.ArmorMaterial;
-import net.minecraft.world.item.equipment.ArmorMaterials;
 import net.minecraft.world.item.equipment.ArmorType;
 import net.minecraft.world.item.equipment.EquipmentAsset;
 import net.minecraft.world.item.equipment.EquipmentAssets;
 import net.minecraft.world.item.equipment.Equippable;
 
+import java.util.EnumMap;
 import java.util.Map;
 
 /**
@@ -29,39 +29,43 @@ public class ModArmorItems {
 
     // === Custom Armor Materials ===
     public static final ArmorMaterial WOODEN_ARMOR_MATERIAL = createArmorMaterial(
-        "wooden", 15, ArmorMaterials.makeDefense(1, 3, 2, 1, 3), 0, 0.0f, 0.0f, ItemTags.PLANKS
+        "wooden", 15, makeDefense(1, 3, 2, 1, 3), 0, 0.0f, 0.0f, ItemTags.PLANKS
     );
     public static final ArmorMaterial STONE_ARMOR_MATERIAL = createArmorMaterial(
-        "stone", 20, ArmorMaterials.makeDefense(2, 5, 4, 2, 5), 5, 0.0f, 0.0f, ItemTags.PLANKS
+        "stone", 20, makeDefense(2, 5, 4, 2, 5), 5, 0.0f, 0.0f, ItemTags.PLANKS
     );
     public static final ArmorMaterial OBSIDIAN_ARMOR_MATERIAL = createArmorMaterial(
-        "obsidian", 40, ArmorMaterials.makeDefense(3, 8, 6, 3, 8), 8, 2.0f, 0.0f, ItemTags.PLANKS
+        "obsidian", 40, makeDefense(3, 8, 6, 3, 8), 8, 2.0f, 0.0f, ItemTags.PLANKS
     );
     public static final ArmorMaterial BONE_ARMOR_MATERIAL = createArmorMaterial(
-        "bone", 20, ArmorMaterials.makeDefense(2, 4, 4, 2, 4), 15, 0.0f, 0.0f, ItemTags.PLANKS
+        "bone", 20, makeDefense(2, 4, 4, 2, 4), 15, 0.0f, 0.0f, ItemTags.PLANKS
     );
     public static final ArmorMaterial AMETHYST_ARMOR_MATERIAL = createArmorMaterial(
-        "amethyst", 30, ArmorMaterials.makeDefense(3, 6, 5, 3, 6), 10, 1.0f, 0.0f, ItemTags.PLANKS
+        "amethyst", 30, makeDefense(3, 6, 5, 3, 6), 10, 1.0f, 0.0f, ItemTags.PLANKS
     );
     public static final ArmorMaterial EMERALD_ARMOR_MATERIAL = createArmorMaterial(
-        "emerald", 45, ArmorMaterials.makeDefense(4, 8, 7, 4, 8), 8, 2.0f, 0.0f, ItemTags.PLANKS
+        "emerald", 45, makeDefense(4, 8, 7, 4, 8), 8, 2.0f, 0.0f, ItemTags.PLANKS
     );
     // === NEW ARMOR SETS v1.5 ===
     public static final ArmorMaterial CRYSTAL_ARMOR_MATERIAL = createArmorMaterial(
-        "crystal", 50, ArmorMaterials.makeDefense(3, 8, 7, 3, 8), 12, 2.0f, 0.1f, ItemTags.PLANKS
+        "crystal", 50, makeDefense(3, 8, 7, 3, 8), 12, 2.0f, 0.1f, ItemTags.PLANKS
     );
     public static final ArmorMaterial SHADOW_ARMOR_MATERIAL = createArmorMaterial(
-        "shadow", 55, ArmorMaterials.makeDefense(4, 9, 8, 4, 9), 10, 2.5f, 0.15f, ItemTags.PLANKS
+        "shadow", 55, makeDefense(4, 9, 8, 4, 9), 10, 2.5f, 0.15f, ItemTags.PLANKS
     );
     public static final ArmorMaterial ASTRAL_ARMOR_MATERIAL = createArmorMaterial(
-        "astral", 45, ArmorMaterials.makeDefense(3, 7, 6, 3, 7), 14, 1.5f, 0.0f, ItemTags.PLANKS
+        "astral", 45, makeDefense(3, 7, 6, 3, 7), 14, 1.5f, 0.0f, ItemTags.PLANKS
     );
     // === NEW ARMOR SETS v1.6 ===
     public static final ArmorMaterial ENDER_ARMOR_MATERIAL = createArmorMaterial(
-        "ender", 50, ArmorMaterials.makeDefense(4, 9, 7, 4, 9), 18, 2.0f, 0.1f, ItemTags.PLANKS
+        "ender", 50, makeDefense(4, 9, 7, 4, 9), 18, 2.0f, 0.1f, ItemTags.PLANKS
     );
     public static final ArmorMaterial FROST_ARMOR_MATERIAL = createArmorMaterial(
-        "frost", 35, ArmorMaterials.makeDefense(3, 7, 6, 3, 7), 12, 1.5f, 0.0f, ItemTags.PLANKS
+        "frost", 35, makeDefense(3, 7, 6, 3, 7), 12, 1.5f, 0.0f, ItemTags.PLANKS
+    );
+    // === NEW ARMOR SET v1.6 (Ruby, life-steal theme) ===
+    public static final ArmorMaterial RUBY_ARMOR_MATERIAL = createArmorMaterial(
+        "ruby", 52, makeDefense(4, 9, 8, 4, 9), 20, 2.0f, 0.1f, ItemTags.PLANKS
     );
 
     // === WOODEN ARMOR SET ===
@@ -129,6 +133,12 @@ public class ModArmorItems {
     public static final Item FROST_CHESTPLATE = createArmorItem("frost_chestplate", FROST_ARMOR_MATERIAL, ArmorType.CHESTPLATE, false);
     public static final Item FROST_LEGGINGS = createArmorItem("frost_leggings", FROST_ARMOR_MATERIAL, ArmorType.LEGGINGS, false);
     public static final Item FROST_BOOTS = createArmorItem("frost_boots", FROST_ARMOR_MATERIAL, ArmorType.BOOTS, false);
+
+    // === RUBY ARMOR SET (Blood / Life-Steal) ===
+    public static final Item RUBY_HELMET = createArmorItem("ruby_helmet", RUBY_ARMOR_MATERIAL, ArmorType.HELMET, false);
+    public static final Item RUBY_CHESTPLATE = createArmorItem("ruby_chestplate", RUBY_ARMOR_MATERIAL, ArmorType.CHESTPLATE, false);
+    public static final Item RUBY_LEGGINGS = createArmorItem("ruby_leggings", RUBY_ARMOR_MATERIAL, ArmorType.LEGGINGS, false);
+    public static final Item RUBY_BOOTS = createArmorItem("ruby_boots", RUBY_ARMOR_MATERIAL, ArmorType.BOOTS, false);
 
     private static ArmorMaterial createArmorMaterial(String name, int durability, Map<ArmorType, Integer> defense,
             int enchantmentValue, float toughness, float knockbackResistance, net.minecraft.tags.TagKey<Item> repairIngredient) {
@@ -233,10 +243,28 @@ public class ModArmorItems {
         registerItem("frost_chestplate", FROST_CHESTPLATE);
         registerItem("frost_leggings", FROST_LEGGINGS);
         registerItem("frost_boots", FROST_BOOTS);
+
+        registerItem("ruby_helmet", RUBY_HELMET);
+        registerItem("ruby_chestplate", RUBY_CHESTPLATE);
+        registerItem("ruby_leggings", RUBY_LEGGINGS);
+        registerItem("ruby_boots", RUBY_BOOTS);
     }
 
     private static void registerItem(String name, Item item) {
         ResourceKey<Item> key = ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MOD_ID, name));
         Registry.register(BuiltInRegistries.ITEM, key, item);
+    }
+
+    // Cross-loader replacement for ArmorMaterials.makeDefense (private in Mojang mappings):
+    // defense values per ArmorType: boots, leggings, chestplate, helmet, body.
+    private static Map<ArmorType, Integer> makeDefense(int boots, int leggings, int chestplate, int helmet, int body) {
+        Map<ArmorType, Integer> defense = Map.of(
+            ArmorType.BOOTS, boots,
+            ArmorType.LEGGINGS, leggings,
+            ArmorType.CHESTPLATE, chestplate,
+            ArmorType.HELMET, helmet,
+            ArmorType.BODY, body
+        );
+        return new EnumMap<>(defense);
     }
 }

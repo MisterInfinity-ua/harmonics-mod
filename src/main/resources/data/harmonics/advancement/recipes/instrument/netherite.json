@@ -5,7 +5,9 @@
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
-          "minecraft:netherite_ingot"
+          {
+            "items": "minecraft:netherite_ingot"
+          }
         ]
       }
     },

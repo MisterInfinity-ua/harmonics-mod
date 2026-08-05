@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " X ",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "X": "harmonics:ruby",
+    "S": "minecraft:stick"
+  },
+  "result": {
+    "id": "harmonics:ruby_shovel",
+    "count": 1
+  },
+  "show_notification": true
+}

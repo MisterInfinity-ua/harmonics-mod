@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "M M",
+    "M M"
+  ],
+  "key": {
+    "M": "harmonics:ruby"
+  },
+  "result": {
+    "id": "harmonics:ruby_boots",
+    "count": 1
+  },
+  "show_notification": true
+}

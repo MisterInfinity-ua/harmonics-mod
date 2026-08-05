@@ -124,6 +124,15 @@ public class InstrumentItem extends Item {
                 p.addEffect(new MobEffectInstance(MobEffects.HASTE,
                         Math.round(150 * strength), 0, true, true));
             }
+        } else if (material == InstrumentMaterial.VOID) {
+            // Void anthem: darkens and slows every hostile caught in the blast.
+            List<Monster> hostiles = level.getEntitiesOfClass(Monster.class, box, e -> true);
+            for (Monster hostile : hostiles) {
+                hostile.addEffect(new MobEffectInstance(MobEffects.DARKNESS,
+                        Math.round(100 * strength), 1, true, true));
+                hostile.addEffect(new MobEffectInstance(MobEffects.SLOWNESS,
+                        Math.round(80 * strength), 1, true, true));
+            }
         }
     }
 }

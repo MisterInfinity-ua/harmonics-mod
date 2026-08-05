@@ -287,6 +287,18 @@ public class ModWeaponItem extends Item {
                             (int) (80.0f * multiplier), 0, false, true));
                 }
             }
+            case LIFE_STEAL -> {
+                if (attacker instanceof Player player) {
+                    float healAmount = getAttackDamage() * 0.1f * multiplier;
+                    player.heal(healAmount);
+                    if (masterwork) {
+                        player.addEffect(new MobEffectInstance(MobEffects.ABSORPTION,
+                                (int) (60.0f * multiplier), 0, false, true));
+                    }
+                }
+                target.addEffect(new MobEffectInstance(MobEffects.GLOWING,
+                        (int) (20.0f * multiplier), 0, false, true));
+            }
         }
     }
 

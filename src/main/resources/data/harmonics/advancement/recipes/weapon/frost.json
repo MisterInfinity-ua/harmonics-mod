@@ -5,7 +5,9 @@
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
-          "minecraft:ice"
+          {
+            "items": "minecraft:ice"
+          }
         ]
       }
     },

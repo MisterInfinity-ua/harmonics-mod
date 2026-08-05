@@ -27,7 +27,18 @@ public final class ModItems {
     public static final Map<InstrumentMaterial, Map<InstrumentType, InstrumentItem>> INSTRUMENTS =
             new EnumMap<>(InstrumentMaterial.class);
 
+    // Standalone Ruby gem item (crafting ingredient for the Ruby weapon + armor sets).
+    public static Item RUBY;
+
     private ModItems() {
+    }
+
+    private static ResourceKey<Item> id(String name) {
+        return ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(Harmonics.MOD_ID, name));
+    }
+
+    private static Item registerItem(String name, Item item) {
+        return Registry.register(BuiltInRegistries.ITEM, id(name), item);
     }
 
     public static void init() {
@@ -38,6 +49,7 @@ public final class ModItems {
             }
             INSTRUMENTS.put(material, byType);
         }
+        RUBY = registerItem("ruby", new Item(new Item.Properties().setId(id("ruby")).stacksTo(64)));
     }
 
     private static InstrumentItem register(InstrumentMaterial material, InstrumentType type) {

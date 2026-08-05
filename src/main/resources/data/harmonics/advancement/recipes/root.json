@@ -7,6 +7,7 @@
     "description": {
       "translate": "advancement.harmonics.root.description"
     },
+    "background": "minecraft:gui/advancements/backgrounds/stone",
     "frame": "task",
     "show_toast": false,
     "announce_to_chat": false,

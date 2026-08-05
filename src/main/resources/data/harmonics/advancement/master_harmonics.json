@@ -187,6 +187,24 @@
       "conditions": {
         "recipe": "harmonics:instrument/lava_flute"
       }
+    },
+    "set_instrument_void": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:instrument/void_flute"
+      }
+    },
+    "set_armor_ruby": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/ruby_helmet"
+      }
+    },
+    "set_weapon_ruby": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:weapon/ruby_sword"
+      }
     }
   },
   "requirements": [
@@ -276,6 +294,15 @@
     ],
     [
       "set_instrument_lava"
+    ],
+    [
+      "set_instrument_void"
+    ],
+    [
+      "set_armor_ruby"
+    ],
+    [
+      "set_weapon_ruby"
     ]
   ]
 }

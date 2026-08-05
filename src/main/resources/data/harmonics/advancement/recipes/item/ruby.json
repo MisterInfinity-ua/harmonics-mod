@@ -1,0 +1,34 @@
+{
+  "parent": "harmonics:recipes/root",
+  "criteria": {
+    "has_ingredient": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:redstone"
+          }
+        ]
+      }
+    },
+    "has_recipe_0": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:item/ruby"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_ingredient"
+    ],
+    [
+      "has_recipe_0"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "harmonics:item/ruby"
+    ]
+  }
+}

@@ -5,7 +5,9 @@
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
-          "minecraft:prismarine_shard"
+          {
+            "items": "minecraft:prismarine_shard"
+          }
         ]
       }
     },

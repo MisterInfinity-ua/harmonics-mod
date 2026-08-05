@@ -277,6 +277,30 @@
       "conditions": {
         "recipe": "harmonics:armor/frost_boots"
       }
+    },
+    "crafted_ruby_helmet": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/ruby_helmet"
+      }
+    },
+    "crafted_ruby_chestplate": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/ruby_chestplate"
+      }
+    },
+    "crafted_ruby_leggings": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/ruby_leggings"
+      }
+    },
+    "crafted_ruby_boots": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "harmonics:armor/ruby_boots"
+      }
     }
   },
   "requirements": [
@@ -411,6 +435,18 @@
     ],
     [
       "crafted_frost_boots"
+    ],
+    [
+      "crafted_ruby_helmet"
+    ],
+    [
+      "crafted_ruby_chestplate"
+    ],
+    [
+      "crafted_ruby_leggings"
+    ],
+    [
+      "crafted_ruby_boots"
     ]
   ]
 }

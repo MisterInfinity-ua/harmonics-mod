@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "MMM",
+    "M M"
+  ],
+  "key": {
+    "M": "harmonics:ruby"
+  },
+  "result": {
+    "id": "harmonics:ruby_helmet",
+    "count": 1
+  },
+  "show_notification": true
+}
