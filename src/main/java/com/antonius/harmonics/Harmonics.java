@@ -171,6 +171,10 @@ public class Harmonics implements ModInitializer {
                 // Ruby gem (v1.6)
                 output.accept(ModItems.RUBY);
 
+                // Ruby ore blocks (v1.6)
+                output.accept(new ItemStack(ModBlocks.RUBY_ORE));
+                output.accept(new ItemStack(ModBlocks.DEEPSLATE_RUBY_ORE));
+
                 // Ruby Armor (v1.6)
                 output.accept(ModArmorItems.RUBY_HELMET);
                 output.accept(ModArmorItems.RUBY_CHESTPLATE);

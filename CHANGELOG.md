@@ -5,6 +5,17 @@ All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.6.2] - Hotfix
+
+### Added
+- Ruby ore blocks (`ruby_ore`, `deepslate_ruby_ore`) now appear in the
+  Harmonics creative tab.
+- Missing block translations for ruby ores in `en_us` and `uk_ua`.
+
+### Fixed
+- Ruby ore textures were rendering as the missing-texture checkerboard in
+  some setups; assets verified present and valid in the built jars.
+
 ## [1.6.1] - Hotfix
 
 ### Fixed
