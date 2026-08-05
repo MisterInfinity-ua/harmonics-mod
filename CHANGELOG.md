@@ -5,6 +5,15 @@ All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.6.1] - Hotfix
+
+### Fixed
+- **Fabric crash on startup** (`Block id not set` NPE in `ModBlocks.registerOre`
+  on MC 26.2): `BlockBehaviour.Properties` now calls `setId(...)` before the
+  block is constructed.
+- **Harmonics 32x** pack format corrected from the data-pack value (`107`) to
+  the resource-pack value (`88`), so the pack validates and applies on 26.2.
+
 ## [Unreleased]
 
 ### Added

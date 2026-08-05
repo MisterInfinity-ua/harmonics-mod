@@ -30,12 +30,13 @@ JAR_PACK = os.path.join(ROOT, "src", "main", "resources", "resourcepacks", "32x"
 STANDALONE = os.path.join(ROOT, "packs", "Harmonics32x")
 ZIP_PATH = os.path.join(ROOT, "packs", "Harmonics32x.zip")
 
-# Modern 1.9+/26.x range schema. 26.2 ships with pack format 107.1.
+# Modern 1.9+/26.x range schema. 26.2 ships with resource pack format 88
+# (data pack format is 107 -- resource packs must use the resource value).
 MCMETA = {
     "pack": {
         "description": "Harmonics 32x - 2x textures for the Faithful 32x setup",
-        "min_format": [107, 0],
-        "max_format": [107, 1],
+        "min_format": [88, 0],
+        "max_format": [88, 1],
     }
 }
 

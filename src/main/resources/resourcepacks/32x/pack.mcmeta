@@ -2,11 +2,11 @@
   "pack": {
     "description": "Harmonics 32x - 2x textures for the Faithful 32x setup",
     "min_format": [
-      107,
+      88,
       0
     ],
     "max_format": [
-      107,
+      88,
       1
     ]
   }

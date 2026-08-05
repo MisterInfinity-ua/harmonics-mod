@@ -40,6 +40,7 @@ public final class ModBlocks {
 
     private static Block registerOre(String name) {
         Block block = new Block(BlockBehaviour.Properties.of()
+                .setId(blockId(name))
                 .strength(3.0f, 3.0f)
                 .requiresCorrectToolForDrops()
                 .sound(SoundType.STONE));
