@@ -1,12 +1,15 @@
 package com.antonius.harmonics;
 
 import com.antonius.harmonics.armor.ModArmorItems;
+import com.antonius.harmonics.block.ModBlocks;
 import com.antonius.harmonics.item.ModItems;
 import com.antonius.harmonics.item.ModWeapons;
 import com.antonius.harmonics.item.WeaponMaterial;
 import com.antonius.harmonics.item.WeaponType;
 import com.antonius.harmonics.recipe.ModRecipes;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
+import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.creativetab.v1.FabricCreativeModeTab;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -16,6 +19,7 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.levelgen.GenerationStep;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -42,8 +46,11 @@ public class Harmonics implements ModInitializer {
         HarmonicsComponents.init();
         
         ModItems.init();
+        ModBlocks.init();
         ModRecipes.init();
         ModWeapons.init();
+
+        registerRubyWorldgen();
         
         // Register armor (44 items across 11 material types)
         LOGGER.info("[Harmonics] Loading Armor content...");
@@ -55,6 +62,17 @@ public class Harmonics implements ModInitializer {
         LOGGER.info("[Harmonics] Unified mod loaded successfully!");
         LOGGER.info("Total items: 130 (36 weapons + 50 instruments + 44 armor)");
         LOGGER.info("====================================");
+    }
+
+    private void registerRubyWorldgen() {
+        BiomeModifications.addFeature(
+            BiomeSelectors.foundInOverworld(),
+            GenerationStep.Decoration.UNDERGROUND_ORES,
+            ResourceKey.create(
+                Registries.PLACED_FEATURE,
+                Identifier.fromNamespaceAndPath(MOD_ID, "ore_ruby")
+            )
+        );
     }
 
     private void registerCreativeTab() {

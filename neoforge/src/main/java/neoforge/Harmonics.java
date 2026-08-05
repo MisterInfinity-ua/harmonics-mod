@@ -1,6 +1,7 @@
 package com.antonius.harmonics;
 
 import com.antonius.harmonics.armor.ModArmorItems;
+import com.antonius.harmonics.block.ModBlocks;
 import com.antonius.harmonics.item.ModItems;
 import com.antonius.harmonics.item.ModWeapons;
 import com.antonius.harmonics.item.WeaponMaterial;
@@ -54,6 +55,8 @@ public class Harmonics {
             HarmonicsComponents.init();
         } else if (registryKey == Registries.RECIPE_SERIALIZER) {
             ModRecipes.init();
+        } else if (registryKey == Registries.BLOCK) {
+            ModBlocks.init();
         } else if (registryKey == Registries.ITEM) {
             ModItems.init();
             ModWeapons.init();

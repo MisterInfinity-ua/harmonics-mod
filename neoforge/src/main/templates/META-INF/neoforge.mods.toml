@@ -10,12 +10,15 @@ modId="${mod_id}" #mandatory
 version="${mod_version}" #mandatory
 
 # A display name for the mod
-displayName="${mod_name}" #mandatory
+displayName="${mod_name} (Unified)" #mandatory
 
-# The description text for the mod (multi line!) (#mandatory)
+# A short description of the mod
 description='''
-Over 130 unique items, including 36 weapons, 50 playable instruments, and 44 complete armor sets.
+Harmonics enriches your Minecraft experience with a massive collection of music, combat, and defense options! Explore over 130 unique items, including 36 weapons, 50 playable instruments, and 44 complete armor sets crafted from various vanilla and custom materials.
 '''
+
+# An icon file that will be shown in the Mods list
+iconFile="harmonics_logo.png"
 
 [[dependencies.${mod_id}]]
     modId="neoforge"
