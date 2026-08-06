@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
  * Registers one InstrumentItem for every (material, type) pair --
- * 9 materials x 5 types = 45 base instruments. Masterwork versions are not
+ * 10 materials x 5 types = 50 base instruments. Masterwork versions are not
  * separate items; they're the same item with the MASTERWORK component applied
  * by the fusion recipe (see FusionRecipe).
  *

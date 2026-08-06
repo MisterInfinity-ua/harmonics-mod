@@ -21,7 +21,7 @@ import java.util.Map;
 
 /**
  * Registration class for all armor items in the unified Harmonics mod.
- * 44 armor items: 11 materials x 4 pieces each.
+ * 48 armor items: 12 materials x 4 pieces each.
  */
 public class ModArmorItems {
 

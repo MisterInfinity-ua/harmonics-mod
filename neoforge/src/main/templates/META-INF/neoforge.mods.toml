@@ -13,12 +13,10 @@ version="${mod_version}" #mandatory
 displayName="${mod_name} (Unified)" #mandatory
 
 # A short description of the mod
-description='''
-Harmonics enriches your Minecraft experience with a massive collection of music, combat, and defense options! Explore over 130 unique items, including 36 weapons, 50 playable instruments, and 44 complete armor sets crafted from various vanilla and custom materials.
-'''
+description='''Harmonics enriches your Minecraft experience with a massive collection of music, combat, and defense options! Explore over 140 unique items, including 40 weapons, 50 playable instruments, and 48 armor pieces (12 complete sets) crafted from various vanilla and custom materials.'''
 
-# An icon file that will be shown in the Mods list
-iconFile="harmonics_logo.png"
+# An icon file that will be shown in the Mods list (NeoForge reads logoFile)
+logoFile="harmonics_logo.png"
 
 [[dependencies.${mod_id}]]
     modId="neoforge"

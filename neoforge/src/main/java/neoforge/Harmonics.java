@@ -13,10 +13,14 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.server.packs.PackType;
+import net.minecraft.server.packs.repository.Pack;
+import net.minecraft.server.packs.repository.PackSource;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.event.AddPackFindersEvent;
 import net.neoforged.neoforge.registries.RegisterEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,7 +28,7 @@ import org.slf4j.LoggerFactory;
 /**
  * Harmonics - Unified Mod (Weapons + Instruments + Armor) for NeoForge.
  *
- * Total: 130 items (36 weapons + 50 instruments + 44 armor)
+ * Total: 141 items (40 weapons + 50 instruments + 48 armor + ruby gem + 2 ore blocks)
  *
  * The item/recipe/armor registration classes are shared with the Fabric build and
  * register through vanilla Registry.register, so they are invoked here during the
@@ -46,6 +50,18 @@ public class Harmonics {
         LOGGER.info("====================================");
 
         modBus.addListener(this::registerContents);
+        modBus.addListener(this::addPackFinders);
+    }
+
+    private void addPackFinders(AddPackFindersEvent event) {
+        event.addPackFinders(
+            Identifier.fromNamespaceAndPath(MOD_ID, "resourcepacks/32x"),
+            PackType.CLIENT_RESOURCES,
+            Component.literal("Harmonics 32x"),
+            PackSource.BUILT_IN,
+            false,
+            Pack.Position.TOP
+        );
     }
 
     private void registerContents(RegisterEvent event) {
@@ -82,7 +98,7 @@ public class Harmonics {
                 // Add instruments
                 ModItems.getAllItems().forEach(output::accept);
 
-                // Add armor (24 total - Wood, Stone, Obsidian, Bone, Amethyst, Emerald)
+                // Add armor (48 total across 12 sets)
                 output.accept(ModArmorItems.WOODEN_HELMET);
                 output.accept(ModArmorItems.WOODEN_CHESTPLATE);
                 output.accept(ModArmorItems.WOODEN_LEGGINGS);

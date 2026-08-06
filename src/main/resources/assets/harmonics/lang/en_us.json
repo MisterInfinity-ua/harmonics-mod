@@ -140,5 +140,15 @@
   "item.harmonics.wooden_chestplate": "Wooden Chestplate",
   "item.harmonics.wooden_helmet": "Wooden Helmet",
   "item.harmonics.wooden_leggings": "Wooden Leggings",
+  "advancement.harmonics.root.title": "Harmonics",
+  "advancement.harmonics.root.description": "Craft armor, weapons and instruments from exotic materials",
+  "advancement.harmonics.armorer.title": "Harmonics Armorer",
+  "advancement.harmonics.armorer.description": "Unlock a Harmonics armor recipe",
+  "advancement.harmonics.weaponsmith.title": "Harmonics Weaponsmith",
+  "advancement.harmonics.weaponsmith.description": "Unlock a Harmonics weapon recipe",
+  "advancement.harmonics.bard.title": "Harmonics Bard",
+  "advancement.harmonics.bard.description": "Unlock a Harmonics instrument recipe",
+  "advancement.harmonics.master.title": "Master of Harmonics",
+  "advancement.harmonics.master.description": "Unlock recipes from every Harmonics material set",
   "itemGroup.harmonics": "Harmonics"
 }

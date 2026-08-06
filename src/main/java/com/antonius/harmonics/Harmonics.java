@@ -29,7 +29,7 @@ import org.slf4j.LoggerFactory;
 /**
  * Harmonics - Unified Mod (Weapons + Instruments + Armor)
  * 
- * Total: 130 items (36 weapons + 50 instruments + 44 armor)
+ * Total: 141 items (40 weapons + 50 instruments + 48 armor + ruby gem + 2 ore blocks)
  */
 public class Harmonics implements ModInitializer {
     public static final String MOD_ID = "harmonics";
@@ -64,7 +64,7 @@ public class Harmonics implements ModInitializer {
         
         LOGGER.info("====================================");
         LOGGER.info("[Harmonics] Unified mod loaded successfully!");
-        LOGGER.info("Total items: 130 (36 weapons + 50 instruments + 44 armor)");
+        LOGGER.info("Total items: 141 (40 weapons + 50 instruments + 48 armor + ruby gem + 2 ore blocks)");
         LOGGER.info("====================================");
     }
 
@@ -107,7 +107,7 @@ public class Harmonics implements ModInitializer {
                 // Add instruments
                 ModItems.getAllItems().forEach(output::accept);
                 
-                // Add armor (24 total - Wood, Stone, Obsidian, Bone, Amethyst, Emerald)
+                // Add armor (48 total across 12 sets)
                 output.accept(ModArmorItems.WOODEN_HELMET);
                 output.accept(ModArmorItems.WOODEN_CHESTPLATE);
                 output.accept(ModArmorItems.WOODEN_LEGGINGS);
