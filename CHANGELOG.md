@@ -25,6 +25,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Harmonics 32x** pack format corrected from the data-pack value (`107`) to
   the resource-pack value (`88`), so the pack validates and applies on 26.2.
 
+## [1.7.1] - Hotfix
+
+### Changed
+- **Ruby ore worldgen is now actually findable**: vein size 7 (was 3), 6 veins
+  per chunk (was 4), concentrated between y=-16 and y=96 (mid-to-deep) instead
+  of randomly spread over the full y=-16..320 range.
+
 ## [1.7.0] - HD Textures & Fixes
 
 ### Added
